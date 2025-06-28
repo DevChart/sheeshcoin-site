@@ -1,6 +1,13 @@
-# sheeshcoin-site
-sheeshcoin-site meme coin
-public/index.html
+sheeshcoin-site/
+├── public/
+│   └── index.html
+├── src/
+│   ├── main.jsx
+│   ├── SheeshLanding.jsx
+│   └── index.css
+├── package.json
+├── vite.config.js
+└── README.md
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -59,7 +66,7 @@ export default function SheeshLanding() {
       <section style={{ textAlign: 'center', padding: '2rem 0' }}>
         <h2 style={{ fontSize: '2rem', fontWeight: 'bold' }}>🔒 Liquidity Locked on UniCrypt</h2>
         <p>SheeshCoin is 100% rug-proof with liquidity locked for 12 months.</p>
-        <a href="https://app.unicrypt.network" target="_blank" style={{ marginTop: '1rem', display: 'inline-block', padding: '0.75rem 1.5rem', backgroundColor: 'white', color: '#7e22ce', textDecoration: 'none', borderRadius: '8px' }}>
+        <a href="https://app.unicrypt.network" target="_blank" rel="noreferrer" style={{ marginTop: '1rem', display: 'inline-block', padding: '0.75rem 1.5rem', backgroundColor: 'white', color: '#7e22ce', textDecoration: 'none', borderRadius: '8px' }}>
           View Lock on UniCrypt
         </a>
       </section>
@@ -67,7 +74,7 @@ export default function SheeshLanding() {
       <section style={{ textAlign: 'center', padding: '2rem 0' }}>
         <h2 style={{ fontSize: '1.875rem', fontWeight: 'bold' }}>📜 Read the Whitepaper</h2>
         <p>Understand the mission, tokenomics, and roadmap for SheeshCoin.</p>
-        <a href="/SheeshCoin_Whitepaper.pdf" target="_blank" style={{ marginTop: '1rem', display: 'inline-block', padding: '0.75rem 1.5rem', backgroundColor: '#facc15', color: 'black', textDecoration: 'none', borderRadius: '8px' }}>
+        <a href="/SheeshCoin_Whitepaper.pdf" target="_blank" rel="noreferrer" style={{ marginTop: '1rem', display: 'inline-block', padding: '0.75rem 1.5rem', backgroundColor: '#facc15', color: 'black', textDecoration: 'none', borderRadius: '8px' }}>
           Download PDF
         </a>
       </section>
@@ -96,31 +103,22 @@ body {
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "vite": "^4.0.0"
+    "vite": "^4.0.0",
+    "@vitejs/plugin-react": "^3.0.0"
   }
 }
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react()]
 });
-"scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview"
-}
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+# SheeshCoin Site
 
-export default defineConfig({
-  plugins: [react()],
-});
-{
-  "builds": [
-    { "src": "package.json", "use": "@vercel/static-build", "config": { "distDir": "dist" } }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/" }
-  ]
-}
+This is the React + Vite landing page for SheeshCoin — a viral meme coin on Base with auto-liquidity and UniCrypt lock.
+
+## How to run locally
+
+```bash
+npm install
+npm run dev
