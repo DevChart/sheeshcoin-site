@@ -1,14 +1,5 @@
 # sheeshcoin-site
 sheeshcoin-site meme coin
-sheeshcoin-site/
-├── public/
-│   └── index.html
-├── src/
-│   ├── index.css
-│   ├── main.jsx
-│   └── SheeshLanding.jsx
-├── package.json
-└── vite.config.js
 <!DOCTYPE html>
 <html lang="en">
   <head>
